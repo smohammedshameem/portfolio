@@ -116,14 +116,14 @@ export default function socialMedia() {
         </a>
       ) : null}
 
-      {socialMediaLinks.kaggle ? (
+      {socialMediaLinks.whatsapp ? (
         <a
-          href={socialMediaLinks.kaggle}
-          className="icon-button kaggle"
+          href={socialMediaLinks.whatsapp}
+          className="icon-button whatsapp"
           target="_blank"
           rel="noopener noreferrer"
         >
-          <i className="fab fa-kaggle"></i>
+          <i className="fab fa-whatsapp"></i>
           <span></span>
         </a>
       ) : null}

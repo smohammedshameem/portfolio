@@ -1,7 +1,7 @@
 import React from "react";
 import "./AchievementCard.scss";
 
-export default function AchievementCard({cardInfo, isDark}) {
+export default function AchievementCard({ cardInfo, isDark }) {
   function openUrlInNewTab(url, name) {
     if (!url) {
       console.log(`URL for ${name} not found`);
@@ -36,7 +36,9 @@ export default function AchievementCard({cardInfo, isDark}) {
               className={
                 isDark ? "dark-mode certificate-tag" : "certificate-tag"
               }
-              onClick={() => openUrlInNewTab(v.url, v.name)}
+              onClick={() => {
+                openUrlInNewTab(v.url, v.name)
+              }}
             >
               {v.name}
             </span>

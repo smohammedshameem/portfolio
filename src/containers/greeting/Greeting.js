@@ -8,6 +8,7 @@ import SocialMedia from "../../components/socialMedia/SocialMedia";
 import Button from "../../components/button/Button";
 import {illustration, greeting} from "../../portfolio";
 import StyleContext from "../../contexts/StyleContext";
+import Typical from "react-typical";
 
 export default function Greeting() {
   const {isDark} = useContext(StyleContext);
@@ -27,6 +28,19 @@ export default function Greeting() {
                 {greeting.title}{" "}
                 <span className="wave-emoji">{emoji("👋")}</span>
               </h1>
+              <div className="rotating-titles">
+          <Typical
+            loop={Infinity}
+            wrapper="span"
+            steps={[
+              "iOS Developer", 1500,
+              "Android Developer", 1500,
+              "Flutter Developer", 1500,
+              "Mobile App Developer", 1500,
+              "Software Engineer", 1500,
+            ]}
+          />
+        </div>
               <p
                 className={
                   isDark
